@@ -2,6 +2,7 @@ class Product:
     """ this class represents a product.  This version has public attributes and getters and setters. """
     
     # self refers to the calling object.  It is passed as the first parameter in each method definition
+    # default values are provided because python does NOT support function overloading, so classes only have 1 constructor
     def __init__(self, id=0, code="na", description="na", unitPrice=0, quantity=0):
         """ init is a "magic method" that is used to construct or instantiate a product.  
             p = Product() will create a product with default attribute values 
@@ -45,7 +46,7 @@ class Product:
         self.quantity = quantity
 
     def __str__(self):
-    """ another "magic method" that converts a product object into a string.
+        """ another "magic method" that converts a product object into a string.
         When you call print(p) or print(str(p)) this method is called "under the covers" on your behalf"""
         return f'Product(id: {self.id}, code: {self.code}, description: {self.description}, ' \
                f'unit price: {self.unitPrice}, quantity: {self.quantity})'

@@ -2,7 +2,7 @@ from productBest import *
 
 
 def testConstructor():
-    p1 = Product()
+    p1 = Product()      # not a default constructor – default values were assigned in function definition
     print(f"Testing constructor with default values.  Expect default values. {p1}")
     p2 = Product(101, "p101", "test description", 12.50, 2)
     print(f"Testing constructor with parameters.  Expect product 101. {p2}")
