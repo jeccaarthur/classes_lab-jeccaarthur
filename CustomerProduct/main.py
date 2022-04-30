@@ -1,16 +1,31 @@
-from productTests import *
+import productTests
+import customerTests
 
 def main():
-    testConstructor()
+    # product tests
+    # productTests.testConstructor()
+    # print()
+    #productTests.testGetters()
+    # productTests.testPropertyGetters()
+    #productTests.testSetters()
+    # productTests.testPropertySetters()
+    # print()
+    # productTests.testPropertySettersWithValidation()
+    # print()
+    # productTests.testEncapsulation()
     print()
-    #testGetters()
-    testPropertyGetters()
-    #testSetters()
-    testPropertySetters()
+
+
+    # customer tests
+    customerTests.testConstructor()
     print()
-    testPropertySettersWithValidation()
+    customerTests.testPropertyGetters()
     print()
-    testEncapsulation()
+    customerTests.testPropertySetters()
+    print()
+    customerTests.testPropertySettersWithValidation()
+    print()
+    customerTests.testEncapsulation()
 
 
 # Press the green button in the gutter to run the script.
