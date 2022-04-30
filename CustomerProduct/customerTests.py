@@ -140,7 +140,7 @@ def testEncapsulation():
         print(c1.__email)
     except AttributeError as attErr:
         print("An attribute error was thrown when attempting to access private attributes")
-        print(AttributeError)
+        print(attErr)
         print()
 
 
