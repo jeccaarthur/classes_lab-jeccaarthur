@@ -51,3 +51,12 @@ class Customer:
                f"\tEmail: {self.__email}\n" \
                f"\tFirst name: {self.__firstName}\n" \
                f"\tLast name: {self.lastName}"
+
+    def __eq__(self, other):
+        """Checks equality of two customer objects"""
+        if isinstance(other, Customer):
+            return self.__email == other.email \
+                   and self.__firstName == other.firstName \
+                   and self.__lastName == other.lastName
+        else:
+            return False
