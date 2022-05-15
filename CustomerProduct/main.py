@@ -1,18 +1,47 @@
 import productTests
 import customerTests
+from customerListTests import *
 
 def main():
     '''lab 4'''
-    testConstructor()
+    # testConstructor()
+    # print()
+    # testAppend()
+    # print()
+    # testFind()
+    # print()
+    # testPop()
+    # print()
+    # testRemove()
+    # print()
+    # testClear()
+    # print()
+    # testGetItem()
+    # print()
+    # testSetItem()
+    # print()
+    # testIn()
+    # print()
+    # testForLoop()
+    # print()
+    testAdd()
     print()
+
+
+    '''
     # testGetters()
-    testPropertyGetters()
+    print()
+    # testPropertyGetters()
+    print()
     # testSetters()
-    testPropertySetters()
     print()
-    testPropertySettersWithValidation()
+    # testPropertySetters()
     print()
-    testEncapsulation()
+    # testPropertySettersWithValidation()
+    print()
+    # testEncapsulation()
+    print()
+    '''
 
 
     '''
