@@ -68,7 +68,7 @@ class CustomerList:
         else:
             return -1
 
-    # pop last customer from list (with index)
+    # pop customer from list (with index)
     def pop(self, index=None):
         if index is None:
             return self.__customers.pop()
@@ -99,7 +99,6 @@ class CustomerList:
     # this allows use of indexer
     def __getitem__(self, item):
         """Allows a programmer to [] to get an element in a customer list"""
-        import re
         if isinstance(item, int):
             return self.__customers[item]
         elif isinstance(item, str):
