@@ -2,6 +2,21 @@ import productTests
 import customerTests
 
 def main():
+    '''lab 4'''
+    testConstructor()
+    print()
+    # testGetters()
+    testPropertyGetters()
+    # testSetters()
+    testPropertySetters()
+    print()
+    testPropertySettersWithValidation()
+    print()
+    testEncapsulation()
+
+
+    '''
+    lab 3
     # product tests
     # productTests.testConstructor()
     # print()
@@ -15,7 +30,6 @@ def main():
     # productTests.testEncapsulation()
     print()
 
-
     # customer tests
     customerTests.testConstructor()
     print()
@@ -26,6 +40,7 @@ def main():
     customerTests.testPropertySettersWithValidation()
     print()
     customerTests.testEncapsulation()
+    '''
 
 
 # Press the green button in the gutter to run the script.
