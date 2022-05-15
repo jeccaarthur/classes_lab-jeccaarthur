@@ -1,6 +1,21 @@
-from dominoTests import *
+from boneyardTests import *
 
 def main():
+    # lab 4
+    testConstructor()
+    print()
+    testShuffle()
+    print()
+    testDraw()
+    print()
+    testGetItem()
+    print()
+    testIn()
+    print()
+    testForLoop()
+    print()
+
+    '''
     testConstructor()
     print()
     testPropertyGetters()
@@ -16,6 +31,6 @@ def main():
     testFlip()
     print()
     testEquals()
-
+    '''
 
 main()
