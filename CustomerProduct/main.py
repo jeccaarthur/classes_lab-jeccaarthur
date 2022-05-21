@@ -3,44 +3,32 @@ import customerTests
 from customerListTests import *
 
 def main():
-    '''lab 4'''
-    # testConstructor()
-    # print()
-    # testAppend()
-    # print()
-    # testFind()
-    # print()
-    # testPop()
-    # print()
-    # testRemove()
-    # print()
-    # testClear()
-    # print()
-    # testGetItem()
-    # print()
-    # testSetItem()
-    # print()
-    # testIn()
-    # print()
-    # testForLoop()
-    # print()
+    '''lab 5'''
+
+
+    '''
+    lab 4
+    testConstructor()
+    testAppend()
+    testFind()
+    testPop()
+    testRemove()
+    testClear()
+    testGetItem()
+    testSetItem()
+    testIn()
+    testForLoop()
     testAdd()
-    print()
+    '''
 
 
     '''
     # testGetters()
-    print()
     # testPropertyGetters()
-    print()
     # testSetters()
-    print()
     # testPropertySetters()
-    print()
     # testPropertySettersWithValidation()
-    print()
     # testEncapsulation()
-    print()
     '''
 
 
@@ -48,26 +36,18 @@ def main():
     lab 3
     # product tests
     # productTests.testConstructor()
-    # print()
-    #productTests.testGetters()
+    # productTests.testGetters()
     # productTests.testPropertyGetters()
-    #productTests.testSetters()
+    # productTests.testSetters()
     # productTests.testPropertySetters()
-    # print()
     # productTests.testPropertySettersWithValidation()
-    # print()
     # productTests.testEncapsulation()
-    print()
 
     # customer tests
     customerTests.testConstructor()
-    print()
     customerTests.testPropertyGetters()
-    print()
     customerTests.testPropertySetters()
-    print()
     customerTests.testPropertySettersWithValidation()
-    print()
     customerTests.testEncapsulation()
     '''
 

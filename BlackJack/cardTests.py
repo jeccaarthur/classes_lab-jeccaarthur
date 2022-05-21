@@ -14,6 +14,7 @@ def testConstructor():
     print(f"Expected: Ten of Clubs\n"
           f"Actual {c1}")
 
+
 def testPropertyGetters():
     print(f"{BOLD}Testing getters{END}")
 
