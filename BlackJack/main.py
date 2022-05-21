@@ -4,7 +4,17 @@ from handTests import *
 from bjhand import *
 
 def main():
+    """blackjack"""
 
+    # bjHand tests
+    testBJHandConstructor()
+    print()
+    testHasAce()
+    print()
+    testScoreAndIsBusted()
+    print()
+
+    '''
     # hand tests
     testConstructor()
     print()
@@ -28,6 +38,7 @@ def main():
     print()
     testHasCardWithValue()
     print()
+    '''
 
     '''
     # card tests

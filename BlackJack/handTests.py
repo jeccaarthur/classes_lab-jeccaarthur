@@ -1,7 +1,8 @@
 from hand import *
-# from bjhand import *
+from bjhand import *
 from deck import *
 
+# region hand class tests
 def testConstructor():
     h = Hand()
     d = Deck()
@@ -137,3 +138,41 @@ def testHasCardWithValue():
     except ValueError as vErr:
         print(f"Checking with invalid value - an exception was expected and was thrown")
         print(vErr)
+
+# endregion
+
+
+# region bjhand tests
+
+def testBJHandConstructor():
+    b = BJHand()
+    d = Deck()
+    print(f"Testing constructor - expecting empty hand of cards. {b}")
+
+def testHasAce():
+    b = BJHand()
+    d = Deck()
+    b.fillHand(3, d)
+    print(f"Testing hasAce")
+    print(f"Hand with 3 cards including an ace: {b}")
+    print(f"Result of hasAce - expecting true: {b.hasAce()}")
+    b.discard(0)
+    print(f"Result of hasAce after discarding ace - expecting false: {b.hasAce()}")
+
+def testScoreAndIsBusted():
+    d = Deck()
+    b1 = BJHand()
+    b1.fillHand(3, d)
+    print(f"Testing score and isBusted")
+    print(f"Current hand: {b1}")
+    print(f"Score - expecting 16: {b1.score()}")
+    print(f"isBusted - expecting false: {b1.isBusted()}")
+    b2 = BJHand()
+    b2.addCard(Card(1, 10))
+    b2.addCard(Card(1, 12))
+    print(f"Current hand: {b2}")
+    print(f"Score - expecting 22: {b2.score()}")
+    print(f"isBusted - expecting true: {b2.isBusted()}")
+
+
+# endregion
