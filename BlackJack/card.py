@@ -77,7 +77,7 @@ class Card:
     # endregion
 
     def __str__(self):
-        return f'Card: {Card.__values[self.__value]} of {Card.__suits[self.__suit]}'
+        return f'{Card.__values[self.__value]} of {Card.__suits[self.__suit]}'
 
     def __eq__(self, other):
         """ This "magic method" is called when you check the equality of 2 cards.  if card1 == card2 for example.
