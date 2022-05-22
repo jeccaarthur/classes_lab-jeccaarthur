@@ -112,3 +112,5 @@ def getYesOrNo(prompt = "Enter 'yes' or 'no': "):
             isValid = True
         else:
             print(f"Invalid input. Input should be entered as a string value of 'yes' or 'no'.")
+
+    return value
