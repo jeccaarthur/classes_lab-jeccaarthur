@@ -10,7 +10,7 @@ class Deck:
         self.__cards = []
         for value in range(1, 14):
             for suit in range(1, 5):
-                self.__cards.append(Card(value, suit))
+                self.__cards.append(Card(suit, value))
 
     @property
     def numCards(self):
@@ -38,9 +38,9 @@ class Deck:
 
     def __str__(self):
         """creates a string representation of the cards in the deck"""
-        output = f"Deck["
+        output = f"Deck[\n"
         for c in self.__cards:
-            output += f"{c} "
+            output += f"\t{c}\n "
         output += "]\n"
         return output
 
