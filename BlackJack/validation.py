@@ -96,3 +96,19 @@ def getPositiveFloat(prompt = "Enter a positive floating point number: "):
             print("Invalid input. Input should be entered as a positive decimal number.")
 
     return value
+
+def getYesOrNo(prompt = "Enter 'yes' or 'no': "):
+    """A function that gets and validates a string from the user.
+    It takes a string prompt, if provided, and returns the validated string."""
+    isValid = False
+
+    # get input from user and validate that it's a string
+    while not isValid:
+        # prompt user and set isValid to True if input is a string
+        value = input(prompt)
+        value = value.lower()
+
+        if isinstance(value, str) and value in ('yes', 'no'):
+            isValid = True
+        else:
+            print(f"Invalid input. Input should be entered as a string value of 'yes' or 'no'.")
