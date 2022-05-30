@@ -1,36 +1,32 @@
-from boneyardTests import *
+from trainTests import *
 
 def main():
-    # lab 4
-    testConstructor()
+    # train tests
+    testMTConstructor()
     print()
-    testShuffle()
+    testAdd()
     print()
-    testDraw()
+    testCount()
+    print()
+    testIsEmpty()
+    print()
+    testLastDomino()
+    print()
+    testPlayableValue()
     print()
     testGetItem()
     print()
-    testIn()
+    testMtIsPlayable()
     print()
-    testForLoop()
+    testPtIsPlayable()
+    print()
+    testOpenAndClose()
+    print()
+    testPlayOnMexicanTrain()
+    print()
+    testPlayOnPlayerTrain()
     print()
 
-    '''
-    testConstructor()
-    print()
-    testPropertyGetters()
-    print()
-    testPropertySetters()
-    print()
-    testPropertySettersWithValidation()
-    print()
-    testEncapsulation()
-    print()
-    testIsDouble()
-    print()
-    testFlip()
-    print()
-    testEquals()
-    '''
+
 
 main()
