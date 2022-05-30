@@ -20,6 +20,12 @@ class Gear(Product):
         self.__feature = feature
         self.__weight = weight
 
+    # here's the implementation of the abstract property getter.  Notice that the heading has to match exactly.
+    # if you comment this property out, when you try to create a gear object you'll get a TypeError
+    @property
+    def shippingCharge(self):
+        return 1 * self.__weight
+
     # property procedures.  There's nothing new here.
     # Notice that a gear object has 9 properties.   5 are defined in Product.
     # Only the gear specific properties are defined here
@@ -60,7 +66,8 @@ class Gear(Product):
     def __str__(self):
         return f'Gear(id: {self.id}, code: {self.code}, description: {self.description}, ' \
                f'unit price: {self.unitPrice}, quantity: {self.quantity}, ' \
-               f'sport: {self.__sport}, brand: {self.__brand}, feature: {self.__feature}, weight: {self.__weight} )'
+               f'sport: {self.__sport}, brand: {self.__brand}, feature: {self.__feature}, weight: {self.__weight} ' \
+               f'shippingCharge:  {self.shippingCharge})'
 
     # Replace version in Product with gear specific version
     def __eq__(self, other):

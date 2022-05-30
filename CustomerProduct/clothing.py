@@ -21,6 +21,12 @@ class Clothing(Product):
         self.__color = color
         self.__size = size
 
+    # here's the implementation of the abstract property getter.  Notice that the heading has to match exactly.
+    # if you comment this property out and try to create a clothing object, you'll get a TypeError
+    @property
+    def shippingCharge(self):
+        return 1
+
     # property procedures.  There's nothing new here.
     # Notice that a clothing object has 10 properties.   5 are defined in Product.
     # Only the clothing specific properties are defined here
@@ -69,7 +75,8 @@ class Clothing(Product):
     def __str__(self):
         return f'Clothing(id: {self.id}, code: {self.code}, description: {self.description}, ' \
                f'unit price: {self.unitPrice}, quantity: {self.quantity}, ' \
-               f'category: {self.__category}, gender: {self.__gender}, brand: {self.__brand}, color: {self.__color}, size: {self.__size} )'
+               f'category: {self.__category}, gender: {self.__gender}, brand: {self.__brand}, ' \
+               f'color: {self.__color}, size: {self.__size} shipping charge: {self.shippingCharge})'
 
     # Replace or override version in Product with clothing specific version
     def __eq__(self, other):

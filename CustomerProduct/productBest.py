@@ -1,5 +1,14 @@
-class Product:
-    """ This class representa a product.  It adds validation to the property setters."""
+# the abc module contains the ABC "helper" class from which all abstract classes should be derived
+# and decorators like abstractmethod and abstract property
+from abc import ABC, abstractmethod
+
+
+# Product is now derived from ABC which makes it an abstract class
+# and abstract class is used as part of the infrastructure of other classes
+# and contains one or more abstract methods or properties
+# an abstract class is a "building block" but can NOT be instantiated
+class Product(ABC):
+    """ This class represents a product.  It adds validation to the property setters."""
 
     def __init__(self, id=0, code="na", description="na", unitPrice=0, quantity=0):
         self.__id = id
@@ -8,6 +17,15 @@ class Product:
         self.__unitPrice = unitPrice
         self.__quantity = quantity
 
+    # the product class can not implement the shippingCharge property because
+    # shipping rules are different for clothing and gear
+    # adding this definition here requires concrete derived classes to implement the property
+    @property
+    @abstractmethod
+    def shippingCharge(self):
+        pass
+
+    # nothing else in this class has changed
     @property
     def id(self):
         return self.__id
@@ -66,6 +84,16 @@ class Product:
     def __str__(self):
         return f'Product(id: {self.__id}, code: {self.__code}, description: {self.__description}, ' \
                f'unit price: {self.__unitPrice}, quantity: {self.__quantity})'
+
+    def __eq__(self, other):
+        """ This "magic method" is called when you check the equality of 2 products.  I had to add this to the product class
+        in order for find and __contains__ to work"""
+        if isinstance(other, Product):
+            return (self.id == other.id and self.code == other.code and
+                    self.description == other.description and self.unitPrice == other.unitPrice and
+                    self.quantity == other.quantity)
+        else:
+            return False
 
 
 
